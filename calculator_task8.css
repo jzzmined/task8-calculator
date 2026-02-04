@@ -53,3 +53,7 @@ button:hover {
 button:active {
     background-color: rgb(127, 108, 124);
 }
+
+.delete {
+    font-size: 40px;
+}
