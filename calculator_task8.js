@@ -11,14 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function calculate() {
-        console.log("i love xyz");
-    // try {
-    //     screen.value = eval("i love u xyz");
-    // } catch (error) {
-    //     screen.value = "Syntax Error";
-    // }
+         try {
+        screen.value = eval(screen.value);
+    } catch (error) {
+        screen.value = "Syntax Error";
     }
-
+    }
+    
     function deleteOn() {
         screen.value = screen.value.slice(0, -1);
     }  
