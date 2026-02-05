@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgb(233, 234, 236);
+    background-color: rgb(244, 222, 244);
 }
 
 #calculator {
@@ -17,6 +17,7 @@ body {
     box-shadow: 
         0 20px 60px rgba(0, 0, 0, 0.3),
         0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 20px rgb(126, 135, 135);
 }
 
 #screen {
