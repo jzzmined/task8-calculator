@@ -20,8 +20,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function deleteOn() {
         screen.value = screen.value.slice(0, -1);
-    }  
+    } 
 
+    function toggleSign() {
+        if (screen.value) {
+            if (screen.value.startsWith('-')) {
+                screen.value = screen.value.slice(1);
+            } else {
+                screen.value = '-' + screen.value;
+            }
+        }
+    }
+
+    window.toggleSign = toggleSign;
     window.appendToDisplay = appendToDisplay;
     window.clearScreen = clearScreen;
     window.calculate = calculate;
@@ -35,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             appendToDisplay(key);
         }
 
-        else if (['+', '-', '*', '/'].includes(key)) {
+        else if (['+', '-', '*', '/','%'].includes(key)) {
             appendToDisplay(key);
         }
 
