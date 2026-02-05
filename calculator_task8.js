@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const key = event.key;
 
         if (key >= '0' && key <= '9') {
-            handleInput(key);
+            appendToDisplay(key);
         }
 
         else if (['+', '-', '*', '/'].includes(key)) {
-            handleInput(key);
+            appendToDisplay(key);
         }
 
         else if (key == 'Enter') {
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         else if (key == 'Backspace') {
-            handleBackspace();
+            event.preventDefault();
             deleteOn();
         }
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         else if (key === '.') {
-            handleInput(key);
+            appendToDisplay(key);
         }
     });
 })
