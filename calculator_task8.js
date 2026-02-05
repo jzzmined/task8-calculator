@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function calculate() {
          try {
         screen.value = eval(screen.value);
-    } catch (error) {
+        } catch (error) {
         screen.value = "Syntax Error";
-    }
+        }
     }
     
     function deleteOn() {
