@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function calculate() {
          try {
-        screen.value = eval(screen.value);
+        let expression = screen.value.replace(/×/g, '*').replace(/÷/g, '/');
+        screen.value = eval(expression);
         } catch (error) {
         screen.value = "Syntax Error";
         }
@@ -46,8 +47,17 @@ document.addEventListener('DOMContentLoaded', function() {
             appendToDisplay(key);
         }
 
-        else if (['+', '-', '*', '/','%'].includes(key)) {
+        else if (['+', '-','%'].includes(key)) {
             appendToDisplay(key);
+        }
+
+        else if (key === '*') {
+            appendToDisplay('×');
+        }
+
+        else if (key === '/') {
+            event.preventDefault();
+            appendToDisplay('÷');
         }
 
         else if (key == 'Enter') {
